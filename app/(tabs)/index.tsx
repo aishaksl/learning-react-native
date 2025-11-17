@@ -1,3 +1,4 @@
+import MovieCard from "@/components/movieCard";
 import SearchBar from "@/components/SearchBar";
 import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
@@ -36,7 +37,7 @@ export default function HomeScreen() {
 
             <FlatList
               data={movies}
-              renderItem={({ item }) => <Text className="text-white text-sm">{item.title}</Text>}
+              renderItem={({ item }) => <MovieCard {...item} />}
               keyExtractor={(item) => item.id.toString()}
               numColumns={3}
               columnWrapperStyle={{ justifyContent: "flex-start", gap: 20, paddingRight: 5, marginBottom: 10 }}
