@@ -46,5 +46,5 @@ export const updateSearchCount = async (query: string, movie: Movie) => {
     console.error("Error updating search count:", error);
     throw error;
   }
-};
+}
 
